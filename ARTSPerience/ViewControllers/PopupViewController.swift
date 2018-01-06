@@ -22,7 +22,12 @@ class PopupViewController: UIViewController {
         let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
         
         DispatchQueue.main.asyncAfter(deadline: time) {
-            self.dismiss(animated: true, completion: nil)
+            UIView.animate(withDuration: 1.0, animations: {
+                self.popupView.alpha = 0.0
+            }, completion: { _ in
+                self.dismiss(animated: true, completion: nil)
+            })
+            
         }
     }
 
