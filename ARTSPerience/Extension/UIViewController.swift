@@ -24,7 +24,9 @@ extension UIViewController {
     
     func setupCustomBackButton() {
         // custom back button image
-        self.navigationController?.navigationBar.topItem?.title = ""
+
+        navigationItem.backBarButtonItem = UIBarButtonItem(title:" ", style: .plain, target: nil, action: nil)
+        
         navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "icon-left")
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "icon-left")
     }
