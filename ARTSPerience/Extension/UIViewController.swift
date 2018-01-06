@@ -14,6 +14,14 @@ extension UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    func showNavbar() {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    func hideBackButton() {
+        self.navigationItem.hidesBackButton = true
+    }
+    
     // MARK:- show alert
     func showAlert(_ title: String, description: String) {
         

@@ -13,7 +13,7 @@ import MapKit
 
 class HomeViewController: UIViewController {
 
-    let limit = 10
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var counterLabel: UILabel!
@@ -22,12 +22,15 @@ class HomeViewController: UIViewController {
     fileprivate var arViewController: ARViewController!
     var tableData = [Place]()
     
+    let limit = 10
     var userCoordinate = CLLocationCoordinate2D()
     var annotations = [ARAnnotation]()
     var places = [Place]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // remove splash
+        navigationController?.viewControllers.removeFirst()
         
         showARButton.rounded(radius: 28)
         showARButton.addShadow()
@@ -36,8 +39,19 @@ class HomeViewController: UIViewController {
         // mapview
         mapView.showsUserLocation = true
 
+        // tableview
+        tableView.rowHeight = 100
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableFooterView = UIView()
+        
         setupLocation()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showNavbar()
+        hideBackButton()
     }
     
     func setupLocation() {
@@ -75,21 +89,26 @@ class HomeViewController: UIViewController {
         }
         
         arViewController.setAnnotations(annotations)
-        self.present(arViewController, animated: true, completion: nil)
+        self.present(arViewController, animated: false, completion: nil)
     }
     
     func setupTable() {
-        
-        // setup tableview
-        tableView.rowHeight = 100
-        tableView.dataSource = self
-        tableView.delegate = self
-        
         tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 72, right: 0)
         
         tableData = PlaceStore.getAll()
         counterLabel.text = "\(tableData.count) locations found."
         tableView.reloadData()
+        spinner.stopAnimating()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController {
+            if let selectedRow = tableView.indexPathForSelectedRow?.row {
+                let place = tableData[selectedRow]
+                
+                destination.place = place
+            }
+        }
     }
 }
 
@@ -126,6 +145,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.placeImageView.sd_setImage(with: place.imgURL?.url, placeholderImage: #imageLiteral(resourceName: "sample"), completed: nil)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
 }
 
