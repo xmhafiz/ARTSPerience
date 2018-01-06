@@ -39,6 +39,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>comgooglemaps</string>
+        <string>waze</string>
+    </array>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera usage in the apps.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

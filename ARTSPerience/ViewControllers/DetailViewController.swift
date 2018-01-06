@@ -62,6 +62,12 @@ class DetailViewController: UIViewController {
             print(urlLink)
         }
     }
+    @IBAction func showLocation(_ sender: Any) {
+        if let coords = place?.coordinates {
+            openLocation(latitude: coords[1], longitude: coords[0], placeName: place?.name ?? "...")
+        }
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         showNavbar()
