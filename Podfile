@@ -9,4 +9,5 @@ target 'ARTSPerience' do
   pod 'HDAugmentedReality', '~> 2.3'
   pod 'ObjectMapper'
   pod 'SDWebImage'
+  pod 'IQKeyboardManagerSwift'
 end

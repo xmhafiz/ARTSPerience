@@ -13,6 +13,7 @@ import MapKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController {
     var locationManager: CLLocationManager!
     fileprivate var arViewController: ARViewController!
     var tableData = [Place]()
+    var data = [Place]()
     
     let limit = 10
     var userCoordinate = CLLocationCoordinate2D()
@@ -46,6 +48,8 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
+        
+        searchBar.delegate = self
         
         setupLocation()
         
@@ -114,7 +118,8 @@ class HomeViewController: UIViewController {
     func setupTable() {
         tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 72, right: 0)
         
-        tableData = PlaceStore.getAll()
+        data = PlaceStore.getAll()
+        tableData = data // copy
         counterLabel.text = "\(tableData.count) locations found."
         tableView.reloadData()
         spinner.stopAnimating()
@@ -128,6 +133,25 @@ class HomeViewController: UIViewController {
                 destination.place = place
             }
         }
+    }
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("search for.. \(searchText)")
+        
+        if searchText.isEmpty {
+            tableData = data
+        }
+        else {
+            tableData = data.filter { ($0.name?.lowercased().contains(searchText.lowercased())) ?? false }
+        }
+        
+        tableView.reloadData()
     }
 }
 

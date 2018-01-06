@@ -1,5 +1,6 @@
 PODS:
   - HDAugmentedReality (2.3.0)
+  - IQKeyboardManagerSwift (5.0.7)
   - ObjectMapper (3.1.0)
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
@@ -7,14 +8,16 @@ PODS:
 
 DEPENDENCIES:
   - HDAugmentedReality (~> 2.3)
+  - IQKeyboardManagerSwift
   - ObjectMapper
   - SDWebImage
 
 SPEC CHECKSUMS:
   HDAugmentedReality: 2ea96cb488aa81298e6557a897b4252d62e55843
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
 
-PODFILE CHECKSUM: 58af68f44ffcc69a1f12a7b4ee78d26c06e19e93
+PODFILE CHECKSUM: 28ab9173e92e8d68eb3fe6c197a7db67e06bcfc5
 
 COCOAPODS: 1.3.1

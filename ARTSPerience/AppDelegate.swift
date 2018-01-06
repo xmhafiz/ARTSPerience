@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSAttributedStringKey.foregroundColor : UIColor.navbar,
             NSAttributedStringKey.font: UIFont.medium(size: 16)
         ]
+        
+        IQKeyboardManager.sharedManager().enable = true
+
         
         return true
     }
