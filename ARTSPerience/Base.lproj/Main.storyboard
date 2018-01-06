@@ -12,8 +12,10 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
             <string>AvenirNext-Heavy</string>
             <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -152,12 +154,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="q7d-pK-qGM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmb-WA-KTk">
-                                <rect key="frame" x="123.5" y="520.5" width="73" height="23.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARTSperiance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lt-Vc-Kqc">
                                 <rect key="frame" x="52" y="275.5" width="216.5" height="41"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
@@ -167,6 +163,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover great arts places on the go with Augmented Reality and Local Feeds." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-vH-wPR">
                                 <rect key="frame" x="32" y="324.5" width="256" height="66"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmb-WA-KTk">
+                                <rect key="frame" x="123.5" y="520.5" width="73" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -195,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNP-xQ-h4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="386" y="116"/>
+            <point key="canvasLocation" x="384.375" y="115.14084507042254"/>
         </scene>
         <!--Information-->
         <scene sceneID="3wo-Cz-lWr">
@@ -291,6 +293,86 @@
             </objects>
             <point key="canvasLocation" x="2058" y="116"/>
         </scene>
+        <!--Popup View Controller-->
+        <scene sceneID="Xqj-lL-kr6">
+            <objects>
+                <viewController storyboardIdentifier="PopupViewController" id="qlR-yq-YY6" customClass="PopupViewController" customModule="ARTSPerience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gMd-50-8PQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25f-G0-uX1">
+                                <rect key="frame" x="16" y="432" width="288" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="IFm-rg-G3Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
+                                    </imageView>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aby-Yx-UQo">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="R6X-9y-toG">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearest Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF6-Df-tvl">
+                                        <rect key="frame" x="96" y="24" width="176" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="IhD-j1-JSt">
+                                        <rect key="frame" x="16" y="24" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="IhD-j1-JSt" secondAttribute="height" multiplier="1:1" id="DrW-Li-DJq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are more than 4 restaurants found nearby" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odS-TF-n39">
+                                        <rect key="frame" x="96" y="50" width="176" height="41"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="odS-TF-n39" firstAttribute="top" secondItem="jF6-Df-tvl" secondAttribute="bottom" constant="2.5" id="4SP-Ef-38V"/>
+                                    <constraint firstAttribute="trailing" secondItem="IFm-rg-G3Z" secondAttribute="trailing" id="5bg-1L-LMx"/>
+                                    <constraint firstItem="IhD-j1-JSt" firstAttribute="top" secondItem="25f-G0-uX1" secondAttribute="top" constant="24" id="6Kb-zD-Dki"/>
+                                    <constraint firstAttribute="trailing" secondItem="odS-TF-n39" secondAttribute="trailing" constant="16" id="6sf-ao-aWT"/>
+                                    <constraint firstItem="aby-Yx-UQo" firstAttribute="top" secondItem="25f-G0-uX1" secondAttribute="top" id="DK3-ly-Cq2"/>
+                                    <constraint firstItem="IhD-j1-JSt" firstAttribute="leading" secondItem="25f-G0-uX1" secondAttribute="leading" constant="16" id="Fh2-Gr-yfd"/>
+                                    <constraint firstAttribute="height" constant="120" id="FkF-gm-Xno"/>
+                                    <constraint firstItem="IFm-rg-G3Z" firstAttribute="top" secondItem="25f-G0-uX1" secondAttribute="top" id="JY4-Tr-6Ur"/>
+                                    <constraint firstAttribute="bottom" secondItem="aby-Yx-UQo" secondAttribute="bottom" id="L30-1L-0Qd"/>
+                                    <constraint firstAttribute="bottom" secondItem="IFm-rg-G3Z" secondAttribute="bottom" id="Osn-m7-yj9"/>
+                                    <constraint firstItem="aby-Yx-UQo" firstAttribute="leading" secondItem="25f-G0-uX1" secondAttribute="leading" id="OxA-qT-Xhm"/>
+                                    <constraint firstItem="odS-TF-n39" firstAttribute="leading" secondItem="IhD-j1-JSt" secondAttribute="trailing" constant="8" id="ZWd-09-UgR"/>
+                                    <constraint firstAttribute="bottom" secondItem="IhD-j1-JSt" secondAttribute="bottom" constant="24" id="ecd-lN-hyj"/>
+                                    <constraint firstAttribute="trailing" secondItem="jF6-Df-tvl" secondAttribute="trailing" constant="16" id="fmp-c1-f8k"/>
+                                    <constraint firstItem="jF6-Df-tvl" firstAttribute="leading" secondItem="IhD-j1-JSt" secondAttribute="trailing" constant="8" id="rw4-j0-KPg"/>
+                                    <constraint firstAttribute="trailing" secondItem="aby-Yx-UQo" secondAttribute="trailing" id="taO-8m-TSO"/>
+                                    <constraint firstItem="jF6-Df-tvl" firstAttribute="top" secondItem="25f-G0-uX1" secondAttribute="top" constant="24" id="xgd-qE-znU"/>
+                                    <constraint firstItem="IFm-rg-G3Z" firstAttribute="leading" secondItem="25f-G0-uX1" secondAttribute="leading" id="xvH-sz-ftD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d94-ac-k7q" firstAttribute="bottom" secondItem="25f-G0-uX1" secondAttribute="bottom" constant="16" id="16j-1m-7oM"/>
+                            <constraint firstItem="d94-ac-k7q" firstAttribute="trailing" secondItem="25f-G0-uX1" secondAttribute="trailing" constant="16" id="abt-bT-39L"/>
+                            <constraint firstItem="25f-G0-uX1" firstAttribute="leading" secondItem="d94-ac-k7q" secondAttribute="leading" constant="16" id="eiL-hY-Wm9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d94-ac-k7q"/>
+                    </view>
+                    <connections>
+                        <outlet property="popupView" destination="25f-G0-uX1" id="Aur-lh-8CR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9F-ZW-5aZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056.875" y="846.12676056338034"/>
+        </scene>
         <!--Web View Controller-->
         <scene sceneID="zsf-YZ-ik0">
             <objects>
@@ -354,6 +436,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="food" width="512" height="512"/>
         <image name="icon-ar" width="24" height="24"/>
         <image name="icon-left" width="24" height="24"/>
         <image name="icon-right" width="24" height="24"/>

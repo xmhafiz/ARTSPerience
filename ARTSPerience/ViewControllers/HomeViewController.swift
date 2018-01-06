@@ -70,7 +70,6 @@ class HomeViewController: UIViewController {
         places = PlaceStore.getAll()
         // setup ARView
         
-        
         arViewController = ARViewController()
         arViewController.closeButtonImage = #imageLiteral(resourceName: "icon-down")
         navigationAR = UINavigationController(rootViewController: arViewController)
@@ -97,6 +96,19 @@ class HomeViewController: UIViewController {
         
         arViewController.setAnnotations(annotations)
         self.present(navigationAR, animated: false, completion: nil)
+        
+        // show promo popups
+        let delay = 12 * Double(NSEC_PER_SEC)
+        let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
+        
+        DispatchQueue.main.asyncAfter(deadline: time) {
+            if let popup = self.storyboard?.instantiateViewController(withIdentifier: "PopupViewController") {
+                
+                popup.modalPresentationStyle = .overCurrentContext
+                self.arViewController.present(popup, animated: true, completion: nil)
+            }
+        }
+        
     }
     
     func setupTable() {
