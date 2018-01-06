@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
     var userCoordinate = CLLocationCoordinate2D()
     var annotations = [ARAnnotation]()
     var places = [Place]()
+    var navigationAR = UINavigationController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +68,12 @@ class HomeViewController: UIViewController {
     @objc func showARView() {
         places = PlaceStore.getAll()
         // setup ARView
+        
+        
         arViewController = ARViewController()
+        
+        navigationAR = UINavigationController(rootViewController: arViewController)
+        navigationAR.isNavigationBarHidden = true
         arViewController.dataSource = self
         
         var count = 0
@@ -89,7 +95,7 @@ class HomeViewController: UIViewController {
         }
         
         arViewController.setAnnotations(annotations)
-        self.present(arViewController, animated: false, completion: nil)
+        self.present(navigationAR, animated: false, completion: nil)
     }
     
     func setupTable() {
@@ -171,6 +177,14 @@ extension HomeViewController: CLLocationManagerDelegate {
 extension HomeViewController: AnnotationViewDelegate {
     func didTouch(annotationView: AnnotationView) {
         print("Tapped view for POI: \(String(describing: annotationView.titleLabel.text))")
+        
+        let filtered = places.filter { $0.name == annotationView.titleLabel.text }
+        
+        if let place = filtered.first {
+            let detail = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+            detail.place = place
+            navigationAR.pushViewController(detail, animated: true)
+        }
     }
 }
 
