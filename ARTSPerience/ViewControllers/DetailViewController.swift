@@ -25,6 +25,10 @@ class DetailViewController: UIViewController {
         getDirectionButton.rounded(radius: 25)
         moreButton.rounded(radius: 25)
         
+        moreButton.addShadow()
+        getDirectionButton.addShadow()
+        backButton.addShadow()
+        
         if let placeData = place {
             titleLabel.text = placeData.name ?? "..."
             imageView.sd_setImage(with: placeData.imgURL?.url, placeholderImage: #imageLiteral(resourceName: "sample"), completed: nil)
