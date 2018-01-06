@@ -11,9 +11,7 @@ import UIKit
 extension UIColor {
     
     // main color
-    static let navbar = UIColor(hexString: "1F2029")
-    static let background = UIColor.groupTableViewBackground
-    static let blueText = UIColor(hexString: "0091EA")
+    static let navbar = UIColor(hexString: "F50057")
     
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)

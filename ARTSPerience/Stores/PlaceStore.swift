@@ -13,7 +13,6 @@ class PlaceStore {
         if let filepath = Bundle.main.path(forResource: "data", ofType: "json") {
             do {
                 let json = try String(contentsOfFile: filepath)
-                print(json)
                 if let places = Mapper<Place>().mapArray(JSONString: json) {
                     return places
                 }

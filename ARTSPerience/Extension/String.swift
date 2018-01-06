@@ -10,6 +10,10 @@ import UIKit
 
 extension String {
     public var url: URL? {
-        return URL(string: self)
+        return URL(string: self.removingWhitespaces())
+    }
+    
+    func removingWhitespaces() -> String {
+        return components(separatedBy: .whitespaces).joined()
     }
 }

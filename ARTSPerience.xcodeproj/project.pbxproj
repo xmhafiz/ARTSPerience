@@ -20,6 +20,7 @@
 		863E4B2520010304004A19FF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 863E4B2420010304004A19FF /* data.json */; };
 		863E4B2720011AED004A19FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E4B2620011AED004A19FF /* DetailViewController.swift */; };
 		863E4B292001272C004A19FF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E4B282001272C004A19FF /* SplashViewController.swift */; };
+		863E4B2B2001384F004A19FF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E4B2A2001384F004A19FF /* WebViewController.swift */; };
 		8648C58E2000B2300036D014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8648C58D2000B2300036D014 /* AppDelegate.swift */; };
 		8648C5932000B2300036D014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8648C5912000B2300036D014 /* Main.storyboard */; };
 		8648C5952000B2300036D014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8648C5942000B2300036D014 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		863E4B2420010304004A19FF /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		863E4B2620011AED004A19FF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		863E4B282001272C004A19FF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		863E4B2A2001384F004A19FF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8648C58A2000B2300036D014 /* ARTSPerience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTSPerience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8648C58D2000B2300036D014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8648C5922000B2300036D014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				863E4B1B2000B413004A19FF /* HomeViewController.swift */,
 				863E4B282001272C004A19FF /* SplashViewController.swift */,
 				863E4B2620011AED004A19FF /* DetailViewController.swift */,
+				863E4B2A2001384F004A19FF /* WebViewController.swift */,
 				863E4B1D2000B787004A19FF /* AnnotationView.swift */,
 				863E4B222000FEB1004A19FF /* PlaceViewCell.swift */,
 			);
@@ -301,6 +304,7 @@
 				863E4B192000B3D3004A19FF /* Place.swift in Sources */,
 				863E4B162000B3C8004A19FF /* UIViewController.swift in Sources */,
 				863E4B132000B3C8004A19FF /* UIColor.swift in Sources */,
+				863E4B2B2001384F004A19FF /* WebViewController.swift in Sources */,
 				863E4B212000CD77004A19FF /* PlaceStore.swift in Sources */,
 				863E4B232000FEB1004A19FF /* PlaceViewCell.swift in Sources */,
 			);

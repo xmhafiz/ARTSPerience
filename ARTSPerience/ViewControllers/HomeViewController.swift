@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // remove splash
         navigationController?.viewControllers.removeFirst()
+        setupCustomBackButton()
         
         showARButton.rounded(radius: 28)
         showARButton.addShadow()
@@ -71,7 +72,7 @@ class HomeViewController: UIViewController {
         
         
         arViewController = ARViewController()
-        
+        arViewController.closeButtonImage = #imageLiteral(resourceName: "icon-down")
         navigationAR = UINavigationController(rootViewController: arViewController)
         navigationAR.isNavigationBarHidden = true
         arViewController.dataSource = self

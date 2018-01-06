@@ -22,6 +22,13 @@ extension UIViewController {
         self.navigationItem.hidesBackButton = true
     }
     
+    func setupCustomBackButton() {
+        // custom back button image
+        self.navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "icon-left")
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "icon-left")
+    }
+    
     // MARK:- show alert
     func showAlert(_ title: String, description: String) {
         
