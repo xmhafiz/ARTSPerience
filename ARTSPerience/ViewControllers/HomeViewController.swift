@@ -151,6 +151,7 @@ extension HomeViewController: UISearchBarDelegate {
             tableData = data.filter { ($0.name?.lowercased().contains(searchText.lowercased())) ?? false }
         }
         
+        counterLabel.text = "\(tableData.count) locations found."
         tableView.reloadData()
     }
 }
