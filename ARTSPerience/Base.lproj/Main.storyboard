@@ -90,7 +90,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1N-yQ-LBE">
-                                <rect key="frame" x="248" y="488" width="56" height="56"/>
+                                <rect key="frame" x="248" y="496" width="56" height="56"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="TN8-SV-mvQ"/>
@@ -121,7 +121,7 @@
                             <constraint firstItem="3xZ-I4-lrU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Vv-ZW-Oh8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3xZ-I4-lrU" secondAttribute="bottom" id="45X-gf-BhS"/>
                             <constraint firstItem="vWQ-A0-LOG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="47F-HB-DhB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K1N-yQ-LBE" secondAttribute="bottom" constant="24" id="7RJ-Fh-c78"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K1N-yQ-LBE" secondAttribute="bottom" constant="16" id="7RJ-Fh-c78"/>
                             <constraint firstItem="y3D-v5-ggz" firstAttribute="top" secondItem="vWQ-A0-LOG" secondAttribute="bottom" constant="8" id="7dF-fz-rVK"/>
                             <constraint firstItem="e03-oR-Oie" firstAttribute="leading" secondItem="y3D-v5-ggz" secondAttribute="trailing" constant="16" id="A6P-eo-6Dz"/>
                             <constraint firstItem="U1M-2G-A6Q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HUp-hG-z99"/>
@@ -136,7 +136,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="NoJ-V2-hRh"/>
+                    <navigationItem key="navigationItem" title="Home" id="NoJ-V2-hRh">
+                        <barButtonItem key="rightBarButtonItem" image="icon-setting" id="63u-iw-tW7"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="counterLabel" destination="y3D-v5-ggz" id="ycb-nr-agJ"/>
                         <outlet property="mapView" destination="3xZ-I4-lrU" id="DkK-FR-Hkk"/>
@@ -168,20 +170,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover great arts places on the go with Augmented Reality and Local Feeds." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-vH-wPR">
-                                <rect key="frame" x="32" y="324.5" width="256" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Experience Street Arts Fun Way&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-vH-wPR">
+                                <rect key="frame" x="32" y="324.5" width="256" height="22"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmb-WA-KTk">
-                                <rect key="frame" x="123.5" y="520.5" width="73" height="23.5"/>
+                                <rect key="frame" x="123.5" y="528.5" width="73" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="izb-iQ-Nxe">
-                                <rect key="frame" x="204" y="522.5" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="izb-iQ-Nxe">
+                                <rect key="frame" x="204" y="530.5" width="20" height="20"/>
+                                <color key="color" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,7 +196,7 @@
                             <constraint firstItem="q7d-pK-qGM" firstAttribute="top" secondItem="akI-bO-Q8b" secondAttribute="top" id="Qr8-fX-77M"/>
                             <constraint firstItem="hXZ-cu-Bo1" firstAttribute="bottom" secondItem="q7d-pK-qGM" secondAttribute="bottom" id="SOe-u4-nop"/>
                             <constraint firstItem="GWF-vH-wPR" firstAttribute="top" secondItem="2lt-Vc-Kqc" secondAttribute="bottom" constant="8" id="d7u-F0-S9m"/>
-                            <constraint firstItem="hXZ-cu-Bo1" firstAttribute="bottom" secondItem="Qmb-WA-KTk" secondAttribute="bottom" constant="24" id="dGw-YE-DgU"/>
+                            <constraint firstItem="hXZ-cu-Bo1" firstAttribute="bottom" secondItem="Qmb-WA-KTk" secondAttribute="bottom" constant="16" id="dGw-YE-DgU"/>
                             <constraint firstItem="hXZ-cu-Bo1" firstAttribute="trailing" secondItem="q7d-pK-qGM" secondAttribute="trailing" id="g80-Ei-Lrd"/>
                             <constraint firstItem="GWF-vH-wPR" firstAttribute="leading" secondItem="hXZ-cu-Bo1" secondAttribute="leading" constant="32" id="gQg-vH-HTP"/>
                             <constraint firstItem="izb-iQ-Nxe" firstAttribute="centerY" secondItem="Qmb-WA-KTk" secondAttribute="centerY" id="jTG-km-WaJ"/>
@@ -453,6 +456,7 @@
         <image name="icon-ar" width="24" height="24"/>
         <image name="icon-left" width="24" height="24"/>
         <image name="icon-right" width="24" height="24"/>
+        <image name="icon-setting" width="24" height="24"/>
         <image name="splash" width="750" height="1334"/>
     </resources>
 </document>

@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
     var tableData = [Place]()
     var data = [Place]()
     
-    let limit = 10
+    let limit = 15
     var userCoordinate = CLLocationCoordinate2D()
     var annotations = [ARAnnotation]()
     var places = [Place]()
@@ -102,7 +102,7 @@ class HomeViewController: UIViewController {
         self.present(navigationAR, animated: false, completion: nil)
         
         // show promo popups
-        let delay = 12 * Double(NSEC_PER_SEC)
+        let delay = 10 * Double(NSEC_PER_SEC)
         let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
         
         DispatchQueue.main.asyncAfter(deadline: time) {

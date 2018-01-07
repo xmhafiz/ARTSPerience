@@ -17,7 +17,7 @@ class PlaceViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        placeImageView.rounded(radius: 76/2)
+        placeImageView.rounded(radius: 76/2, borderWidth: 2, borderColor: .lightGray)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
