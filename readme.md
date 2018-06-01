@@ -7,6 +7,7 @@ iOS apps developed for [Smarter Hackathon Penang](https://hackathon.aspen.com.my
 - Xcode 9
 - Swift 4
 - Cocoapods 1.3.1
+- IPhone 6S and above (supported only)
 
 ### Main Library used
 - HDAugmentedReality
