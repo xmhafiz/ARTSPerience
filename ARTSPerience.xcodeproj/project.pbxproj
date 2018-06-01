@@ -26,6 +26,7 @@
 		8648C5932000B2300036D014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8648C5912000B2300036D014 /* Main.storyboard */; };
 		8648C5952000B2300036D014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8648C5942000B2300036D014 /* Assets.xcassets */; };
 		8648C5982000B2300036D014 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8648C5962000B2300036D014 /* LaunchScreen.storyboard */; };
+		86DC0C2620C1083F0089BA5A /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 86DC0C2520C1083E0089BA5A /* readme.md */; };
 		89782DB5DD16D8FB9B35A696 /* Pods_ARTSPerience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8A7E4244221209E4147C42 /* Pods_ARTSPerience.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		8648C5942000B2300036D014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8648C5972000B2300036D014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8648C5992000B2300036D014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86DC0C2520C1083E0089BA5A /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				8648C5962000B2300036D014 /* LaunchScreen.storyboard */,
 				863E4B2420010304004A19FF /* data.json */,
 				8648C5992000B2300036D014 /* Info.plist */,
+				86DC0C2520C1083E0089BA5A /* readme.md */,
 			);
 			path = ARTSPerience;
 			sourceTree = "<group>";
@@ -174,7 +177,6 @@
 				8648C5872000B2300036D014 /* Frameworks */,
 				8648C5882000B2300036D014 /* Resources */,
 				C57E994FC104BFC35367F1BB /* [CP] Embed Pods Frameworks */,
-				27CB5583C281B5FD7A354055 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,6 +229,7 @@
 				8648C5982000B2300036D014 /* LaunchScreen.storyboard in Resources */,
 				8648C5952000B2300036D014 /* Assets.xcassets in Resources */,
 				8648C5932000B2300036D014 /* Main.storyboard in Resources */,
+				86DC0C2620C1083F0089BA5A /* readme.md in Resources */,
 				863E4B2520010304004A19FF /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,21 +237,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27CB5583C281B5FD7A354055 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARTSPerience/Pods-ARTSPerience-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C57E994FC104BFC35367F1BB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
