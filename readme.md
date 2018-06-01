@@ -18,6 +18,9 @@ iOS apps developed for [Smarter Hackathon Penang](https://hackathon.aspen.com.my
 - Run `pod install` in terminal and open the `.xcworkspace` file. Make sure [Cocoapods](https://cocoapods.org) already installed.
 - All coordinate locations and images are hardcoded in `data.json` (Change it to any intended locations).
 
+### Credit
+- Leman and Fido
+
 ### Screenshots
 
 
